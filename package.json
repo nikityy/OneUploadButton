@@ -1,0 +1,11 @@
+{
+  "name": "oneuploadbutton",
+  "version": "0.0.1",
+  "description": "Simple upload button with multiple file selection support and drag n' drop experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita Gusarov",
+  "license": "MIT"
+}
