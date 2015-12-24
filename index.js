@@ -1,9 +1,9 @@
+var window = window || false;
+
+(function ($, window) {	
 	var OneUploadButton = function(element, callback) {
 		var tests = {
-	    		filereader: typeof FileReader != 'undefined',
-	    		dnd: 'draggable' in document.createElement('span'),
 	    		formdata: !!window.FormData,
-	     		progress: "upload" in new XMLHttpRequest
 	    	}; 
 
 		if (typeof element == "undefined") {
@@ -78,3 +78,12 @@
 			}
 		};
 	}
+
+	// If window object found, act as for browser
+	if (window) {
+		window.OneUploadButton = OneUploadButton;
+	// If not, act as for Node.js
+	} else {
+		module.exports = OneUploadButton;
+	}
+})(jQuery, window);
